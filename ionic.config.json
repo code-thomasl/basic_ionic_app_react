@@ -1,5 +1,7 @@
 {
   "name": "tmpApp",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "react"
 }
