@@ -174,3 +174,8 @@
   --ion-toolbar-color: #fff;
   --ion-toolbar-color-activated: #fff;
 }
+
+.imageElements {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}

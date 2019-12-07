@@ -1,28 +1,34 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons, IonButton, IonIcon, IonFooter, IonMenuButton } from '@ionic/react';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButtons, IonButton, IonIcon, IonFooter, IonMenuButton, IonFab, IonFabButton } from '@ionic/react';
 import React from 'react';
 
-import {star, camera, build } from 'ionicons/icons';
+import {star, camera, build, add } from 'ionicons/icons';
+
+import { Plugins, CameraResultType } from '@capacitor/core';
+import CameraComponent from '../components/CameraComponent';
+import ApiCallComponent from '../components/ApiCallComponent';
+import ApiCall from '../components/ApiCall.js';
+import ApiCallImages from '../components/ApiCallImages.jsx';
 
 const Home: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar color="dark">
-          <IonTitle color="light" size="large">Une application de test</IonTitle>
+        <IonToolbar color="light">
+          <IonTitle color="dark" size="large">TestApp</IonTitle>
+
+        <IonButtons slot="primary">
+          <IonButton color="secondary">
+            <IonIcon slot="start" icon={star} />Rate the app
+          </IonButton>
+          <IonButton color="secondary" href="/about">
+            <IonIcon slot="start" icon={build} />About page
+          </IonButton>
+        </IonButtons>
         </IonToolbar>
       </IonHeader>
       <IonContent className="ion-padding">
-
-        <IonButton color="secondary">
-              <IonIcon slot="end" icon={camera} />
-              Take a picture
-        </IonButton>
-
-        <IonButton color="primary">
-            <IonIcon slot="end" icon={star} />
-              Rate this application
-        </IonButton>
-
+        <ApiCallImages />
+        <CameraComponent />
       </IonContent>
 
       <IonFooter>
