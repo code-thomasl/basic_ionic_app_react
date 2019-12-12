@@ -13,6 +13,9 @@ const About: React.FC = () => {
             <IonBackButton defaultHref="/home" />
           </IonButtons>
           <IonTitle>About Page</IonTitle>
+          <IonContent>
+            
+          </IonContent>
         </IonToolbar>
       </IonHeader>
       <IonContent>
